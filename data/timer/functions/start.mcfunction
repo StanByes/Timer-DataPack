@@ -5,5 +5,5 @@ execute if score TimerActive Parameters matches 0 run tellraw @p ["", {"text":"T
 
 execute if score TimerActive Parameters matches 0 run scoreboard players set Tick timer_tick 20
 execute if score TimerActive Parameters matches 0 run execute store result score Second timer_second run scoreboard players get RequestTimer Parameters
-#execute if score TimerActive Parameters matches 0 run summon minecraft:armor_stand ~ ~ ~ {"Invisible":1b, "Tags":["Timer"],CustomNameVisible:1b, CustomName: {"score":{"name": "Second","objective": "timer_second"},"color": "aqua"}}
+execute if score TimerActive Parameters matches 0 run function timer:init_bossbar
 execute if score TimerActive Parameters matches 0 run scoreboard players set TimerActive Parameters 1
